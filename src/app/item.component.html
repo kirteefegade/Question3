@@ -1,0 +1,23 @@
+<div>
+    <table border="2">
+        <tr>
+            <th>Item name</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Description</th>
+        </tr>
+        <tr *ngFor="let item of itemarr ">
+            <td>{{item.name}}</td>
+            <td>{{item.quantity}}</td>
+            <td>{{item.price}}</td>
+            <td>{{item.description}}</td>
+        </tr>
+    </table>
+    <div>
+        <button type="submit" name="btn" (click)="showForm()" >Add Item</button>
+    </div>
+    <div *ngIf="flag">
+        <item-form [formflag]="flag" (formclose)="flag=$event"></item-form>
+    </div>
+  
+</div>

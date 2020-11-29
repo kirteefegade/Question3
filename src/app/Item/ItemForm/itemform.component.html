@@ -1,0 +1,11 @@
+<div>
+    <form #frm="ngForm" (ngSubmit)="addItem(frm.value)">
+        Itemname:-<input type="text" name="name" id="name" [(ngModel)]="name" required>
+        Quantity:-<input type="text" name="quantity" [(ngModel)]="quantity" required>
+        Price:- <input type="text" name="price" [(ngModel)]="price" required>
+        Description:-<input type="text" name="description" [(ngModel)]="description" required>
+    
+        <button type="submit" name="btn" [disabled]="!frm.valid" >Add Item</button>
+    </form>
+  
+</div>
