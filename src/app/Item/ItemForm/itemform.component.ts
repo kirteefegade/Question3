@@ -13,7 +13,7 @@ export class ItemFormComponent{
     price:number;
     description:string;
     item:Item;
-   
+   flag=true;
 
     @Input()formflag:boolean;
     @Output() formclose=new EventEmitter();
@@ -27,7 +27,7 @@ export class ItemFormComponent{
        this.price=0;
        this.quantity=0;
        this.description="";
-    
+    flag=false;
        this.formclose.emit(false);
     }
 }
