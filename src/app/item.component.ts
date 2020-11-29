@@ -15,8 +15,10 @@ export class ItemComponent implements OnInit{
     }
     ngOnInit(){
         this.itemarr=this.iservice.getAllItems();
+      console.log(this.itemarr);
     }
     showForm(){
         this.flag=true;
+      console.log(this.flag);
     }
 }
